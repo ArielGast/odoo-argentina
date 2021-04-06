@@ -7,10 +7,19 @@ from .pyi25 import PyI25
 from openerp import fields, models, api, _
 from openerp.exceptions import UserError
 from cStringIO import StringIO as StringIO
+import base64
+from io imort BytesIO
 import logging
+import json
 import sys
 import traceback
+from datetime import datetime
 _logger = logging.getLogger(__name__)
+
+try:
+    import qrcode
+except ImportError:
+    qrcode = Not
 
 try:
     from pysimplesoap.client import SoapFault
