@@ -57,7 +57,7 @@ class AccountInvoice(models.Model):
         readonly=True,
         states={'draft': [('readonly', False)]},
     )
-        afip_auth_code = fields.Char(
+    afip_auth_code = fields.Char(
         copy=False,
         string='CAE/CAI/CAEA Code',
         readonly=True,
